@@ -17,8 +17,11 @@ export class BankAccount {
   }
 
   deposit(monto) {
-    if(this.activo){
+    if (this.activo) {
       this.saldo += monto;
+    }
+    else{
+      throw new ValueError();
     }
   }
 
@@ -30,7 +33,7 @@ export class BankAccount {
   }
 
   get balance() {
-    if(!this.activo){
+    if (!this.activo) {
       throw new ValueError();
     }
     return this.saldo;
