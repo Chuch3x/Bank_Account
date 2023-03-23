@@ -1,15 +1,13 @@
-//
-// This is only a SKELETON file for the 'Bank Account' exercise. It's been provided as a
-// convenience to get you started writing code faster.
-//
-
 export class BankAccount {
-  constructor() {
-    throw new Error("Remove this statement and implement this function");
-  }
+  constructor(saldo) {
+    this.activo = false;
+    this.saldo = saldo;
+    }
 
   open() {
-    throw new Error("Remove this statement and implement this function");
+    if (this.activo) throw new ValueError();
+    this.activo = true;
+    this.saldo = 0;
   }
 
   close() {
@@ -25,7 +23,7 @@ export class BankAccount {
   }
 
   get balance() {
-    throw new Error("Remove this statement and implement this function");
+    return this.saldo;
   }
 }
 
