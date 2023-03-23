@@ -1,5 +1,5 @@
 export class BankAccount {
-  constructor(saldo) {
+  constructor (saldo) {
     this.activo = false;
     this.saldo = saldo;
     }
@@ -16,12 +16,15 @@ export class BankAccount {
 
   deposit(monto) {
     if(this.activo){
-      this.saldo+=monto;
+      this.saldo += monto;
     }
   }
 
-  withdraw() {
-    throw new Error("Remove this statement and implement this function");
+  withdraw(monto) {
+    if (this.activo || monto < this.saldo || monto , 0) {
+      throw new ValueError();
+    }
+    this.saldo -= monto;
   }
 
   get balance() {
