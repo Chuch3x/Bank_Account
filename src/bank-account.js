@@ -20,7 +20,7 @@ export class BankAccount {
   }
 
   deposit(monto) {
-    if (this.activo) {
+    if (this.activo && monto > 0) {
       this.saldo += monto;
     }
     else{
