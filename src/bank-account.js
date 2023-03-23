@@ -14,8 +14,10 @@ export class BankAccount {
     throw new Error("Remove this statement and implement this function");
   }
 
-  deposit() {
-    throw new Error("Remove this statement and implement this function");
+  deposit(monto) {
+    if(this.activo){
+      this.saldo+=monto;
+    }
   }
 
   withdraw() {
